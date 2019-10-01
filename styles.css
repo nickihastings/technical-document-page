@@ -1,0 +1,118 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  font-size: 1em;
+}
+/*mobile first styles */
+#wrapper {
+  padding: 0;
+}
+
+#navbar {
+  box-sizing: border-box;
+  padding-top: 35px;
+  padding-left: 20px;
+  padding-right: 20px;
+  max-height: 230px;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch; /*to make scrollbars appear on iphones etc.*/
+  width: 100%;
+  top: 0;
+  background-color: #F8F8F8;
+  -webkit-box-shadow: 0px 10px 5px -3px rgba(107,107,107,0.64);
+-moz-box-shadow: 0px 10px 5px -3px rgba(107,107,107,0.64);
+box-shadow: 0px 10px 5px -3px rgba(107,107,107,0.64);
+  scroll-behavior: smooth; /*adds smooth scrolling to this section*/
+}
+.nav-link {
+  display: block;
+  padding: 0.5em 0;
+  border-bottom: 1px solid #ccc;
+  font-size: 1.1em;
+  color: #333;
+  text-decoration: none;
+}
+.nav-link:first-of-type {
+  border-top: 1px solid #ccc;
+}
+.nav-link:last-of-type{
+  margin-bottom: 1em;
+}
+.nav-link:hover {
+  background: url('https://res.cloudinary.com/nhast25cs/image/upload/v1569500433/long-arrow-left_qwftjg.png') center right no-repeat;
+}
+
+#navbar header {
+  font-size: 1.8em;
+  margin-bottom: 15px
+}
+
+#main-doc {
+  padding: 30px 25px;
+  font-size: 1.1em;
+}
+
+#main-doc header {
+  font-size: 1.6em;
+  margin-top: 1.2em;
+}
+
+li {
+  margin-bottom: 1em;
+}
+
+code {
+  display: block;
+  background-color: #ddd;
+  padding: 1em;
+  line-height: 1.5;
+}
+
+/*desktop screens */
+@media(min-width: 1024px) {
+   #wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+  }
+  #navbar {
+    flex-shrink: 0;
+    max-height: none;
+    height: 90%;
+    width: auto;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+    box-sizing: border-box;
+    padding: 35px 30px 30px;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+     box-shadow: none;
+  }
+  .nav-link {
+    padding: 0.75em 30px 0.75em 5px;
+  }
+  #navbar header {
+    font-size: 2em;
+    margin-bottom: 0.5em;
+  }
+  
+  #main-doc {
+    flex-grow: 2;
+    padding: 30px 50px;
+    margin-top: 0;
+  } 
+  #main-doc header {
+    font-size: 1.75em;
+  }
+  #main-doc section:first-of-type header {
+    margin-top: 0;
+  }
+  
+  footer {
+    margin-top: 2em;
+    padding-top: 1em;
+    font-size: 85%;
+    border-top: 1px solid #ccc;
+  }
+}
